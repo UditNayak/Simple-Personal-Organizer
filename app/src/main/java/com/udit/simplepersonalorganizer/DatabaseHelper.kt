@@ -41,4 +41,30 @@ class DatabaseHelper(context: Context) :
         }
         return db.insert(TABLE_USERS, null, values)
     }
+
+    fun getAdminUsers(): List<UserListActivity.User> {
+        val users = mutableListOf<UserListActivity.User>()
+        val db = readableDatabase
+
+        val cursor = db.query(
+            TABLE_USERS,
+            arrayOf(COL_ID, COL_NAME, COL_EMAIL),
+            "$COL_NAME = ?",
+            arrayOf("admin"),
+            null,
+            null,
+            "$COL_ID ASC"
+        )
+
+        cursor.use {
+            while (it.moveToNext()) {
+                val id = it.getInt(it.getColumnIndexOrThrow(COL_ID))
+                val name = it.getString(it.getColumnIndexOrThrow(COL_NAME))
+                val email = it.getString(it.getColumnIndexOrThrow(COL_EMAIL))
+                users.add(UserListActivity.User(id, name, email))
+            }
+        }
+
+        return users
+    }
 }

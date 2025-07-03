@@ -41,10 +41,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Navigate to list screen
-        // Implement this in Question C
-//        btnViewAll.setOnClickListener {
-//            startActivity(Intent(this, UserListActivity::class.java))
-//        }
+        // Navigate to UserListActivity
+        btnViewAll.setOnClickListener {
+            startActivity(Intent(this, UserListActivity::class.java))
+        }
     }
 }
