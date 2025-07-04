@@ -13,6 +13,54 @@
 - [X] DatabaseHelper class code Screenshot
 
 #### File Structure
+
+```sh
+SimplePersonalOrganizer_2023ebcs701
+├── app/
+│   ├── build/
+│   ├── build.gradle.kts
+│   ├── proguard-rules.pro
+│   └── src/
+│       ├── androidTest/
+│       ├── main/
+│       │   ├── AndroidManifest.xml
+│       │   ├── java/
+│       │   │   └── com/
+│       │   │       └── udit/
+│       │   │           └── simplepersonalorganizer/
+│       │   │               ├── DatabaseHelper.kt
+│       │   │               ├── MainActivity.kt
+│       │   │               ├── UserListActivity.kt       // ProfileActivity
+│       │   │               └── ui/
+│       │   └── res/
+│       │       ├── drawable/
+│       │       ├── layout/
+│       │       │   ├── activity_main.xml
+│       │       │   └── activity_user_list.xml
+│       │       ├── mipmap-anydpi-v26/
+│       │       ├── mipmap-hdpi/
+│       │       ├── mipmap-mdpi/
+│       │       ├── mipmap-xhdpi/
+│       │       ├── mipmap-xxhdpi/
+│       │       ├── mipmap-xxxhdpi/
+│       │       ├── values/
+│       │       │   ├── colors.xml
+│       │       │   ├── strings.xml
+│       │       │   └── themes.xml
+│       │       └── xml/
+│       └── test/
+├── build/
+├── build.gradle.kts
+├── gradle/
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+├── images/
+├── local.properties
+├── README.md
+└── settings.gradle.kts
+```
+
 ![Project Structure](./images/Project_Structure.png)
 
 #### Configuration
